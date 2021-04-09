@@ -1,4 +1,4 @@
-# ExampleGPSTrainingReport
+# Example GPS (or any Sport Science discipline/ thing) Report
 
 Interested in creating a Shiny app for your sport science work? Unsure how to get started? I have created a *very basic* Shiny app, that allows you to interact with and visualise sport science data. 
 The example data used in the Shiny app is (dummy) global positioning system (GPS) data collected on (hypothetical) team-sport athletes, across different session types and 
