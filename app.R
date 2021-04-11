@@ -8,7 +8,7 @@ library(bslib)
 library(DT)
 
 # Load data
-ExampleData <- read.csv("ExampleData.csv")
+ExampleData <- read.csv("ExampleTrainingData.csv")
 # Format dates
 ExampleData$Date_Formatted <- as.Date(ExampleData$Date, tryFormats = c("%d/%m/%y")) 
 # Unite two columns
@@ -21,11 +21,11 @@ ExampleData_WideFormat <- ExampleData_WideFormat %>% select(!(Date:Date_Formatte
 
 
 # Define UI for application - can change title below, to add in team name
-ui <- navbarPage("Example GPS (or Physical Output) Report",
+ui <- navbarPage("Example GPS Report",
                  # Add navbar - can change name (to "By Athlete", for example)
                  tabPanel("Athlete Analysis", 
                           # Create a dropdown selection for individual athlete analysis
-                          selectInput("AthleteName", label = h3("Select Athlete:"), 
+                          selectInput("AthleteName", label = h4("Select Athlete:"), 
                                                     choices = unique(ExampleData$PlayerName), 
                                                     selected = 1),
                           # Plot output (code below in server)
